@@ -5,27 +5,28 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runners.model.TestClass;
 
 import com.test.FileSortApp.StockTest;
-import com.test.stockbeans.Stock;
 
 public class FileSortTest {
 	@Test
 	public void testSortedFile() throws IOException {
-		final String inputFile = "E:\\portfolio.txt";
-		final File expected = new File("E:\\expected.txt");
-	    final String actual = "E:\\actual.txt";
+		final String inputFile = "portfolio.txt";
+		final File expected = new File("expected.txt");
+	    final String actual = "actual.txt";
 		
+	    
+	    
+	    
+	    
 		StockTest test = new StockTest();
 	    test.performStocks(inputFile);
 	    test.displayOutPut(actual);
 	    
 	   
-	    BufferedReader reader1 = new BufferedReader(new FileReader("E:\\expected.txt"));
+	    BufferedReader reader1 = new BufferedReader(new FileReader(expected));
         
         BufferedReader reader2 = new BufferedReader(new FileReader(actual));
          
